@@ -7,7 +7,7 @@ question_answer = {
 
 def start_newgame():
     while True:
-        user_input = input("Are you ready to start the quiz? Y/N ")
+        user_input = input("Are you ready to start the quiz? Y/N ").upper()
         if user_input == "Y":
             break
         elif user_input == "N":
@@ -63,7 +63,7 @@ def show_question():
             answer = "d"         
             question_number_count += 1
 
-        user_input = input("Answer: ")
+        user_input = input("Answer: ").lower()
         if user_input == answer:
             print("CORRECT")
             score += 1
@@ -72,8 +72,16 @@ def show_question():
 def display_score(score):
     print(f"You've got a total of {score}/4 score")
 
+def play_again():
+    input_user = input("Do you want to play again? Y/N").upper()
+    if input_user == N:
+        break
+    else:
+        pass
 
-start_newgame()
-final_score = show_question()
-display_score(final_score)
-    
+while True:
+    start_newgame()
+    final_score = show_question()
+    display_score(final_score)
+    play_again()
+ 
