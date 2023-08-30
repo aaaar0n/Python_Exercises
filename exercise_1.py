@@ -13,6 +13,4 @@ song_verse = (
 print(song_verse)
 ###################
 # Testing Aaron
-###################
-
 
